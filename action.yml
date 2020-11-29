@@ -1,0 +1,20 @@
+name: draw.io CLI
+author: SevergroupTT
+description: 'Run drawio-desktop'
+
+inputs:
+  source:
+    description: 'Input file name'
+    required: true
+  destination:
+    destination: 'Output file name'
+    required: true
+  format:
+    description: 'Ouput file format'
+    required: false
+    default: 'svg'
+
+runs:
+  using: docker
+  image: Dockerfile
+
