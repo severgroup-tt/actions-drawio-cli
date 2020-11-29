@@ -4,10 +4,10 @@ description: 'Run drawio-desktop'
 
 inputs:
   source:
-    description: 'Input file name'
+    description: 'Input file/drectory name'
     required: true
   destination:
-    destination: 'Output file name'
+    destination: 'Output file/directory name'
     required: true
   format:
     description: 'Ouput file format'
