@@ -1,6 +1,10 @@
 name: draw.io CLI
 author: SevergroupTT
-description: 'Run drawio-desktop'
+description: 'Export draw.io diagrams with drawio-desktop'
+
+branding:
+  color: orange
+  icon: book-open
 
 inputs:
   source:
@@ -16,5 +20,5 @@ inputs:
 
 runs:
   using: docker
-  image: Dockerfile
+  image: 'docker://ghcr.io/severgroup-tt/actions-drawio-cli:1.0.0'
 
