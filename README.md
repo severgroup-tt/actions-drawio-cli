@@ -18,18 +18,18 @@ Better use with [actions-checkout](https://github.com/actions/checkout) and
 [git-auto-commit](https://github.com/stefanzweifel/git-auto-commit-action)
 
 
-```
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-      - uses: severgroup-tt/actions-drawio-cli@v0.0.2
-        with:
-          source: doc/diagram.drawio
-          destination: doc/diagram.svg
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          file_pattern: doc/*.svg
-          commit_message: Update diagrams
+```yaml
+steps:
+  - uses: actions/checkout@v2
+    with:
+      ref: ${{ github.head_ref }}
+  - uses: severgroup-tt/actions-drawio-cli@v0.0.2
+    with:
+      source: doc/diagram.drawio
+      destination: doc/diagram.svg
+  - uses: stefanzweifel/git-auto-commit-action@v4
+    with:
+      file_pattern: doc/*.svg
+      commit_message: Update diagrams
 
 ```
